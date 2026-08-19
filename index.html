@@ -223,6 +223,7 @@
                 Out-of-bounds read vulnerability in <code>SWTPM_NVRAM_CheckHeader()</code> caused by comparing length against the size of a pointer instead of the structure itself, leading to memory overread when processing untrusted state blobs.
             </div>
             <div class="cve-meta">
+                <a href="https://surajhacx.github.io/hacx/cve-2026-75900.html" target="_blank" style="font-weight: 600; color: #111;">[Read Full Writeup]</a> | 
                 Upstream Fix: <a href="https://github.com/stefanberger/swtpm/pull/1155" target="_blank">PR #1155</a> | Commit: <a href="https://github.com/stefanberger/swtpm/commit/dc5f5ee" target="_blank">dc5f5ee</a>
             </div>
         </div>
@@ -240,7 +241,7 @@
     <section>
         <h2>Technical Focus</h2>
         <ul class="simple-list">
-            <li><strong>Infrastructure:</strong> OS core components </li>
+            <li><strong>Infrastructure:</strong> OS core components</li>
             <li><strong>Auditing:</strong> C/C++ Static Analysis, Pointer Logic, Struct Alignment, Memory Boundaries</li>
             <li><strong>Offensive Research:</strong> Local Privilege Escalation (LPE), Symlink Attacks, Sandbox Escapes</li>
         </ul>
