@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suraj Theekshana — Vulnerability Researcher</title>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #111111;
+            --muted: #555555;
+            --border: #e0e0e0;
+            --code-bg: #f5f5f5;
+            --accent: #0055bb;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            border-bottom: 2px solid var(--text);
+            padding-bottom: 20px;
+            margin-bottom: 35px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .title {
+            font-family: monospace;
+            font-size: 1rem;
+            color: var(--muted);
+            margin-top: 4px;
+        }
+
+        .contact-links {
+            margin-top: 15px;
+            font-family: monospace;
+            font-size: 0.9rem;
+        }
+
+        .contact-links a {
+            color: var(--accent);
+            text-decoration: none;
+            margin-right: 15px;
+        }
+
+        .contact-links a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-family: monospace;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 6px;
+            margin-bottom: 20px;
+        }
+
+        /* CVE Entry Styling */
+        .cve-card {
+            border: 1px solid var(--border);
+            padding: 18px 20px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            background-color: #fff;
+        }
+
+        .cve-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 8px;
+        }
+
+        .cve-id {
+            font-family: monospace;
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: var(--text);
+        }
+
+        .cve-status {
+            font-family: monospace;
+            font-size: 0.85rem;
+            padding: 2px 6px;
+            background-color: var(--code-bg);
+            border: 1px solid var(--border);
+            border-radius: 3px;
+        }
+
+        .cve-target {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--muted);
+        }
+
+        .cve-desc {
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+
+        .cve-meta {
+            font-family: monospace;
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+
+        .cve-meta a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .cve-meta a:hover {
+            text-decoration: underline;
+        }
+
+        /* Simple Lists */
+        ul.simple-list {
+            list-style-type: none;
+        }
+
+        ul.simple-list li {
+            padding: 8px 0;
+            border-bottom: 1px dashed var(--border);
+            font-size: 0.95rem;
+        }
+
+        ul.simple-list li:last-child {
+            border-bottom: none;
+        }
+
+        .cert-tag {
+            font-family: monospace;
+            font-weight: bold;
+            display: inline-block;
+            min-width: 80px;
+        }
+
+        footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            font-family: monospace;
+            font-size: 0.8rem;
+            color: var(--muted);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Suraj Theekshana</h1>
+        <div class="title">Vulnerability Researcher &amp; Offensive Security Engineer</div>
+        <div class="contact-links">
+            <a href="https://github.com/surajhacx" target="_blank">GitHub: @surajhacx</a>
+            <a href="mailto:surajtheekshanahackerone@gmail.com">Email</a>
+        </div>
+    </header>
+
+    <section>
+        <h2>About</h2>
+        <p>
+            Offensive security researcher specializing in low-level systems security, Linux kernel/hypervisor infrastructure, memory safety, and C code auditing. Focused on upstream vulnerability discovery and responsible disclosure.
+        </p>
+    </section>
+
+    <section>
+        <h2>Vulnerabilities &amp; Disclosures</h2>
+
+        <!-- ======================================================= -->
+        <!-- TEMPLATE: COPY THIS BLOCK TO EASILY ADD A NEW CVE -->
+        <!-- ======================================================= -->
+        <!--
+        <div class="cve-card">
+            <div class="cve-header">
+                <span class="cve-id">CVE-202X-XXXXX</span>
+                <span class="cve-status">Status / Severity</span>
+            </div>
+            <div class="cve-target">Component / Target Software</div>
+            <div class="cve-desc">
+                Brief description of the vulnerability and security impact.
+            </div>
+            <div class="cve-meta">
+                Fix / Ref: <a href="LINK_HERE" target="_blank">Commit / PR #XXXX</a>
+            </div>
+        </div>
+        -->
+        <!-- ======================================================= -->
+
+        <!-- CVE 1: swtpm -->
+        <div class="cve-card">
+            <div class="cve-header">
+                <span class="cve-id">CVE-2026-75900</span>
+                <span class="cve-status">CVSS 6.1 (Moderate)</span>
+            </div>
+            <div class="cve-target">swtpm (Software TPM Emulator)</div>
+            <div class="cve-desc">
+                Out-of-bounds read vulnerability in <code>SWTPM_NVRAM_CheckHeader()</code> caused by comparing length against the size of a pointer instead of the structure itself, leading to memory overread when processing untrusted state blobs.
+            </div>
+            <div class="cve-meta">
+                Upstream Fix: <a href="https://github.com/stefanberger/swtpm/pull/1155" target="_blank">PR #1155</a> | Commit: <a href="https://github.com/stefanberger/swtpm/commit/dc5f5ee" target="_blank">dc5f5ee</a>
+            </div>
+        </div>
+
+    </section>
+
+    <section>
+        <h2>Certifications</h2>
+        <ul class="simple-list">
+            <li><span class="cert-tag">[OSCP+]</span> Offensive Security Certified Professional</li>
+            <li><span class="cert-tag">[OSWP]</span> Offensive Security Wireless Professional</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Technical Focus</h2>
+        <ul class="simple-list">
+            <li><strong>Infrastructure:</strong> Linux Virtualization (QEMU/KVM, libvirt, swtpm)</li>
+            <li><strong>Auditing:</strong> C/C++ Static Analysis, Pointer Logic, Struct Alignment, Memory Boundaries</li>
+            <li><strong>Offensive Research:</strong> Local Privilege Escalation (LPE), Symlink Attacks, Sandbox Escapes</li>
+        </ul>
+    </section>
+
+    <footer>
+        Suraj Theekshana &bull; surajhacx
+    </footer>
+
+</body>
+</html>
