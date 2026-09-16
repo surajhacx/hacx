@@ -192,25 +192,21 @@
     <section>
         <h2>Vulnerabilities &amp; Disclosures</h2>
 
-        <!-- ======================================================= -->
-        <!-- TEMPLATE: COPY THIS BLOCK TO EASILY ADD A NEW CVE -->
-        <!-- ======================================================= -->
-        <!--
+        <!-- CVE 2: Libvirt (NEW) -->
         <div class="cve-card">
             <div class="cve-header">
-                <span class="cve-id">CVE-202X-XXXXX</span>
-                <span class="cve-status">Status / Severity</span>
+                <span class="cve-id">CVE-2026-77159</span>
+                <span class="cve-status">CVSS 5.5 (Medium)</span>
             </div>
-            <div class="cve-target">Component / Target Software</div>
+            <div class="cve-target">Libvirt (Sandbox Escape &amp; Local Privilege Escalation)</div>
             <div class="cve-desc">
-                Brief description of the vulnerability and security impact.
+                A symlink-following flaw was found in libvirt's <code>qemuTPMEmulatorPrepareHost()</code> function. The function uses a path-based <code>chown()</code> on the swtpm logfile without checking for symbolic links. A local attacker with access to the swtpm account can replace the logfile with a symlink, causing libvirtd (running as root) to transfer ownership of an arbitrary file to the swtpm user.
             </div>
             <div class="cve-meta">
-                Fix / Ref: <a href="LINK_HERE" target="_blank">Commit / PR #XXXX</a>
+                <a href="https://surajhacx.github.io/hacx/cve-2026-77159.html" target="_blank" style="font-weight: 600; color: #111;">[Read Full Writeup]</a> | 
+                Ref: <a href="https://access.redhat.com/security/cve/CVE-2026-77159" target="_blank">Red Hat CVE</a> | <a href="https://gitlab.com/libvirt/libvirt/-/work_items/909" target="_blank">GitLab Issue #909</a>
             </div>
         </div>
-        -->
-        <!-- ======================================================= -->
 
         <!-- CVE 1: swtpm -->
         <div class="cve-card">
